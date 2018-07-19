@@ -1,4 +1,4 @@
-{{- $platform := .Site.Params.platform }}
+{{- with $platform := .Site.Params.platform -}}
 {{- $image := $platform.image }}
 {{- $tagline := $platform.tagline -}}
 {{- $subTagline := $platform.subTagline -}}
@@ -25,3 +25,4 @@
     </p>
   </div>
 </section>
+{{- end -}}

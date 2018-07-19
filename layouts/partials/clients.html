@@ -1,4 +1,4 @@
-{{- $clients := .Site.Params.clients -}}
+{{- with $clients := .Site.Params.clients -}}
 {{- $tagline := $clients.tagline -}}
 {{- $subTagline := $clients.subTagline -}}
 {{- $clientExamples := $clients.clientExamples -}}
@@ -35,3 +35,4 @@
     </div>
   </div>
 </section>
+{{- end -}}

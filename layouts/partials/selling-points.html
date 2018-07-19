@@ -1,6 +1,6 @@
-{{- $sellingPoints := .Site.Params.sellingPoints -}}
-{{- $tagline := $sellingPoints.tagline }}
-{{- $points := $sellingPoints.points }}
+{{- with $sellingPoints := .Site.Params.sellingPoints -}}
+{{- $tagline := .tagline }}
+{{- $points := .points }}
 <section class="section is-medium">
   <div class="container">
     <div class="columns">
@@ -35,3 +35,4 @@
     </div>
   </div>
 </section>
+{{- end -}}
